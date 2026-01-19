@@ -109,7 +109,9 @@ sp:
   subcortical/volume:
     fn: "subcortical_*_volume_*.tsv"
   metricsinroi:
-    fn: "rois_mean_stats.tsv"
+    fn: "space-native_*_rois_mean_stats.tsv"
+  metricsinroi_harmonized:
+    fn: "space-harmonized_*_rois_mean_stats.tsv"
 ```
 
 ## Contribute a new module

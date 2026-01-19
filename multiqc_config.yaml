@@ -9,6 +9,10 @@ streamline_count:
 metricsinroi:
   iqr_multiplier: 3 # Default: samples outside Q1 - 3*IQR to Q3 + 3*IQR are marked as fail
 
+# metricsinroi_harmonized configuration default thresholds
+metricsinroi_harmonized:
+  iqr_multiplier: 3 # Default: samples outside Q1 - 3*IQR to Q3 + 3*IQR are marked as fail
+
 # Framewise Displacement module configuration default thresholds
 framewise_displacement:
   warn_threshold: 0.8 # Default: samples with max FD < 0.8mm get "pass" status
@@ -45,6 +49,7 @@ module_order:
   - streamline_count
   - tractometry
   - metricsinroi
+  - metricsinroi_harmonized
   - cortical
   - subcortical
 
@@ -63,4 +68,6 @@ sp:
   subcortical/volume:
     fn: "subcortical_*_volume_*.tsv"
   metricsinroi:
-    fn: "rois_mean_stats.tsv"
+    fn: "space-native*mean_desc-roi_stats.tsv"
+  metricsinroi_harmonized:
+    fn: "space-harmonized*mean_desc-roi_stats.tsv"
